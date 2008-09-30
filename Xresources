@@ -31,5 +31,6 @@ XTerm.vt100.translations: #override \
 	Ctrl<Btn1Down>: ignore() \n\
 	Ctrl<Btn2Down>: ignore() \n\
 	Ctrl<Btn3Down>: ignore() \n\
+	Ctrl<KeyPress>p:dabbrev-expand() \n\
 
 
