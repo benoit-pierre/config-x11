@@ -1,0 +1,36 @@
+
+XTerm.hold               : false
+XTerm.toolBar            : false
+XTerm.waitForMap         : true
+XTerm.zIconBeep          : 0
+XTerm.termName           : xterm-256color
+XTerm.backarrowKeyIsErase: false
+
+XTerm.vt100.alwaysHighlight     : false
+XTerm.vt100.backarrowKey        : true
+XTerm.vt100.background          : #000000
+XTerm.vt100.charClass           : 37:48,45-47:48,126:48
+XTerm.vt100.cursorColor         : #ffa500
+XTerm.vt100.cutNewline          : true
+XTerm.vt100.cutToBeginningOfLine: true
+XTerm.vt100.deleteIsDEL         : false
+XTerm.vt100.font                : -b&h-lucidatypewriter-medium-r-normal-sans-14-140-75-75-m-90-iso10646-1
+XTerm.vt100.forceBoxChars       : true
+XTerm.vt100.foreground          : #d0d0d0
+XTerm.vt100.highlightSelection  : true
+XTerm.vt100.jumpScroll          : true
+XTerm.vt100.metaSendsEscape     : true
+XTerm.vt100.on4Clicks           : group
+XTerm.vt100.scrollTtyOutput     : false
+XTerm.vt100.showMissingGlyphs   : true
+XTerm.vt100.titeInhibit         : true
+XTerm.vt100.trimSelection       : true
+XTerm.vt100.utf8                : 1
+
+XTerm.vt100.translations: #override \
+	Ctrl<Btn1Down>: ignore() \n\
+	Ctrl<Btn2Down>: ignore() \n\
+	Ctrl<Btn3Down>: ignore() \n\
+	Ctrl<KeyPress>p:dabbrev-expand() \n\
+
+
