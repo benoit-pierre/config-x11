@@ -28,8 +28,7 @@ xset r on
 xset r rate 300 50
 xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
 
-gnome-settings-daemon
-gnome-screensaver
+gnome-settings-daemon &!
 
 which pulseaudio
 HAS_PULSE="[ $? -eq 0 ]"
