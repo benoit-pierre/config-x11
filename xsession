@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-X11DIR="$HOME/.X11"
+X11DIR="$HOME/.x11"
 
 source "$ZDOTDIR/.zshenv"
 
