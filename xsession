@@ -6,7 +6,7 @@ source "$ZDOTDIR/.zshenv"
 
 export LANG='C' LANGUAGE='C' LC_CTYPE='en_US.UTF-8' LC_TIME='C'
 
-export GDK_USE_XFT=1
+# export GDK_USE_XFT=1
 
 umask 077
 
