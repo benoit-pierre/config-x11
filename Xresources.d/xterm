@@ -33,4 +33,6 @@ XTerm.vt100.translations: #override \
 	Ctrl<Btn3Down>: ignore() \n\
 	Ctrl<KeyPress>p:dabbrev-expand() \n\
 
-
+/*
+** vim: ft=Xresources
+*/
