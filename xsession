@@ -12,7 +12,7 @@ umask 077
 
 if { [ -z "$SSH_AUTH_SOCK" ] || [ -z "$SSH_AGENT_PID" ]; } && [ ! -f "$HOME/.ssh/noagent" ]
 then
-  eval "`ssh-agent -s`" &&
+  eval "`command ssh-agent -s`" &&
 fi
 
 if test -z "$DBUS_SESSION_BUS_ADDRESS"
