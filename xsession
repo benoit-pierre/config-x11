@@ -1,8 +1,8 @@
 #! /bin/zsh
 
-X11DIR="$HOME/.x11"
+nvidia-settings -a InitialPixmapPlacement=2 -a GlyphCache=1
 
-source "$ZDOTDIR/.zshenv"
+X11DIR="$HOME/.x11"
 
 export LANG='C' LANGUAGE='C' LC_CTYPE='en_US.UTF-8' LC_TIME='C'
 
