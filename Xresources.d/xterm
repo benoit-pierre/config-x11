@@ -28,10 +28,10 @@ XTerm.vt100.trimSelection       : true
 XTerm.vt100.utf8                : 1
 
 XTerm.vt100.translations: #override \
+	Ctrl<KeyPress>p:dabbrev-expand() \n\
 	Ctrl<Btn1Down>: ignore() \n\
 	Ctrl<Btn2Down>: ignore() \n\
 	Ctrl<Btn3Down>: ignore() \n\
-	Ctrl<KeyPress>p:dabbrev-expand() \n\
 
 XTerm.vt100.color0 : #000000
 XTerm.vt100.color1 : #FF2F1D
