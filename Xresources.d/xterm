@@ -4,7 +4,7 @@ XTerm.toolBar            : false
 XTerm.waitForMap         : true
 XTerm.zIconBeep          : 0
 XTerm.termName           : xterm-256color
-XTerm.backarrowKeyIsErase: false
+XTerm.backarrowKeyIsErase: true
 
 XTerm.vt100.alwaysHighlight     : false
 XTerm.vt100.backarrowKey        : true
