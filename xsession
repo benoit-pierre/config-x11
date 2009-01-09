@@ -49,11 +49,6 @@ ion3 &
 
 WM_PID=$!
 
-if test -r "$HOME/.screen/rc.d/xsession"
-then
-  term -rc xsession -t screen &
-fi
-
 kill -STOP $XSESSION_PID
 
 wait $WM_PID
