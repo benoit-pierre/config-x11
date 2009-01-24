@@ -9,6 +9,7 @@ XTerm.backarrowKeyIsErase: true
 XTerm.vt100.alwaysHighlight     : false
 XTerm.vt100.backarrowKey        : true
 XTerm.vt100.background          : #000000
+XTerm.vt100.bellIsUrgent        : true
 XTerm.vt100.charClass           : 37:48,45-47:48,126:48
 XTerm.vt100.cursorColor         : #ffa500
 XTerm.vt100.cutNewline          : true
