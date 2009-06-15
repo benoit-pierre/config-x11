@@ -24,8 +24,6 @@ xset r on
 xset r rate 300 50
 xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
 
-gnome-settings-daemon &!
-
 which pulseaudio
 HAS_PULSE="[ $? -eq 0 ]"
 
@@ -50,7 +48,5 @@ kill -STOP $XSESSION_PID
 wait $WM_PID
 
 eval "$HAS_MPD_SONATA" && { pkill -u $UID -f sonata; mpd --kill; }
-
-pkill -u $UID -f gnome-settings-daemon
 
 # vim: ft=sh sw=2
