@@ -2,12 +2,16 @@
 
 nvidia-settings -a InitialPixmapPlacement=2 -a GlyphCache=1
 
-X11DIR="$HOME/.x11"
+# SSH agent. {{{
 
 if { [ -z "$SSH_AUTH_SOCK" ] || [ -z "$SSH_AGENT_PID" ]; } && [ ! -f "$HOME/.ssh/noagent" ]
 then
   eval "`command ssh-agent -s`" &&
 fi
+
+# }}}
+
+# DBUS. {{{
 
 if test -z "$DBUS_SESSION_BUS_ADDRESS"
 then
@@ -15,12 +19,20 @@ then
   echo "D-BUS per-session daemon address is: $DBUS_SESSION_BUS_ADDRESS"
 fi
 
+# }}}
+
+# X11. {{{
+
+X11DIR="$HOME/.x11"
+
 xhost +local:
 
 xset b off
 xset r on
 xset r rate 300 50
 xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
+
+# }}}
 
 which pulseaudio
 HAS_PULSE="[ $? -eq 0 ]"
@@ -47,4 +59,4 @@ wait $WM_PID
 
 eval "$HAS_MPD_SONATA" && { pkill -u $UID -f sonata; mpd --kill; }
 
-# vim: ft=sh sw=2
+# vim: ft=sh sw=2 foldmethod=marker
