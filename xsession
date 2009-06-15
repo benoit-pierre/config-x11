@@ -55,8 +55,14 @@ done
 
 # }}}
 
-which pulseaudio
-HAS_PULSE="[ $? -eq 0 ]"
+# Pulseaudio. {{{
+
+if which pulseaudio
+then
+  pulseaudio --daemonize --high-priority=1 --realtime=1
+fi
+
+# }}}
 
 which mpd sonata
 HAS_MPD_SONATA="[ $? -eq 0 ]"
@@ -64,7 +70,6 @@ HAS_MPD_SONATA="[ $? -eq 0 ]"
 which fetchmail && [ -r "$HOME/.fetchmailrc" ]
 HAS_FETCHMAIL="[ $? -eq 0 ]"
 
-eval "$HAS_PULSE" && pulseaudio --daemonize --high-priority=1 --realtime=1
 eval "$HAS_MPD_SONATA" && (mpd && sonata) &
 eval "$HAS_FETCHMAIL" && fetchmail
 
