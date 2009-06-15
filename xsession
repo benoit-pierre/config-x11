@@ -55,6 +55,15 @@ done
 
 # }}}
 
+# Fetchmail. {{{
+
+if which fetchmail && [[ -r "$HOME/.fetchmailrc" ]]
+then
+  fetchmail
+fi
+
+# }}}
+
 # Pulseaudio. {{{
 
 if which pulseaudio
@@ -72,11 +81,6 @@ then
 fi
 
 # }}}
-
-which fetchmail && [ -r "$HOME/.fetchmailrc" ]
-HAS_FETCHMAIL="[ $? -eq 0 ]"
-
-eval "$HAS_FETCHMAIL" && fetchmail
 
 export XSESSION_PID=$$
 
