@@ -42,6 +42,19 @@ xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
 
 # }}}
 
+# Synergy {{{
+
+for synergy in synergy{c,s};
+do
+  cfg="$HOME/.$synergy.conf"
+  if [[ -r "$cfg" ]]
+  then
+    "$synergy" --config "$cfg" --daemon
+  fi
+done
+
+# }}}
+
 which pulseaudio
 HAS_PULSE="[ $? -eq 0 ]"
 
