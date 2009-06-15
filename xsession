@@ -4,8 +4,6 @@ nvidia-settings -a InitialPixmapPlacement=2 -a GlyphCache=1
 
 X11DIR="$HOME/.x11"
 
-export LANG='C' LANGUAGE='C' LC_CTYPE='en_US.UTF-8' LC_TIME='C'
-
 # export GDK_USE_XFT=1
 
 umask 077
