@@ -37,6 +37,7 @@ xhost +local:
 xset b off
 xset r on
 xset r rate 300 50
+setxkbmap -option compose:rwin
 xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
 
 # }}}
