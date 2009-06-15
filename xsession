@@ -4,8 +4,6 @@ nvidia-settings -a InitialPixmapPlacement=2 -a GlyphCache=1
 
 X11DIR="$HOME/.x11"
 
-# export GDK_USE_XFT=1
-
 if { [ -z "$SSH_AUTH_SOCK" ] || [ -z "$SSH_AGENT_PID" ]; } && [ ! -f "$HOME/.ssh/noagent" ]
 then
   eval "`command ssh-agent -s`" &&
