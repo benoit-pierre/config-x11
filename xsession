@@ -64,13 +64,18 @@ fi
 
 # }}}
 
-which mpd sonata
-HAS_MPD_SONATA="[ $? -eq 0 ]"
+# MPD/sonata startup. {{{
+
+if which mpd sonata
+then
+  (mpd && sonata) &
+fi
+
+# }}}
 
 which fetchmail && [ -r "$HOME/.fetchmailrc" ]
 HAS_FETCHMAIL="[ $? -eq 0 ]"
 
-eval "$HAS_MPD_SONATA" && (mpd && sonata) &
 eval "$HAS_FETCHMAIL" && fetchmail
 
 export XSESSION_PID=$$
@@ -83,6 +88,10 @@ kill -STOP $XSESSION_PID
 
 wait $WM_PID
 
+# MPD/sonata cleanup. {{{
+
 eval "$HAS_MPD_SONATA" && { pkill -u $UID -f sonata; mpd --kill; }
+
+# }}}
 
 # vim: ft=sh sw=2 foldmethod=marker
