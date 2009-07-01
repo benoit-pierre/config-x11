@@ -44,14 +44,19 @@ xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
 
 # Synergy {{{
 
-for synergy in synergy{c,s};
-do
-  cfg="$HOME/.$synergy.conf"
-  if [[ -r "$cfg" ]]
-  then
-    "$synergy" --config "$cfg" --daemon
-  fi
-done
+# server
+cfg="$HOME/.synergys.conf"
+if [[ -r "$cfg" ]]
+then
+  synergys --config "$cfg" --daemon
+fi
+
+# client
+cfg="$HOME/.synergyc.conf"
+if [[ -r "$cfg" ]]
+then
+  synergyc `cat "$cfg"`
+fi
 
 # }}}
 
