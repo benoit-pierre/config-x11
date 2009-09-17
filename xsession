@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/zsh -l
 
 # NVIDIA settings. {{{
 
@@ -9,12 +9,9 @@ fi
 
 # }}}
 
-# SSH agent. {{{
+# SSH/GPG agents. {{{
 
-if { [ -z "$SSH_AUTH_SOCK" ] || [ -z "$SSH_AGENT_PID" ]; } && [ ! -f "$HOME/.ssh/noagent" ]
-then
-  eval "`command ssh-agent -s`" &&
-fi
+ssh-gpg-agents
 
 # }}}
 
