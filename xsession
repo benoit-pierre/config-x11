@@ -1,5 +1,23 @@
 #! /bin/zsh -l
 
+# Output logging. {{{
+
+redirect-output()
+{
+  exec 1>>"$HOME/.xsession-errors" 2>&1
+}
+
+log()
+{
+  echo "`date --rfc-3339=seconds` -- $@"
+}
+
+redirect-output
+
+# }}}
+
+log 'starting'
+
 # NVIDIA settings. {{{
 
 if which nvidia-settings && lspci | grep -q 'VGA compatible controller: nVidia'
@@ -99,5 +117,7 @@ wait $WM_PID
 eval "$HAS_MPD_SONATA" && { pkill -u $UID -f sonata; mpd --kill; }
 
 # }}}
+
+log 'terminating'
 
 # vim: ft=sh sw=2 foldmethod=marker
