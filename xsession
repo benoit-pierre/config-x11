@@ -2,7 +2,7 @@
 
 # NVIDIA settings. {{{
 
-if which nvidia-settings && lspci -q 'VGA compatible controller: nVidia'
+if which nvidia-settings && lspci | grep -q 'VGA compatible controller: nVidia'
 then
   nvidia-settings -a InitialPixmapPlacement=2 -a GlyphCache=1
 fi
