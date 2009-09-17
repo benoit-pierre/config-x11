@@ -18,6 +18,18 @@ redirect-output
 
 log 'starting'
 
+X11DIR="$HOME/.x11"
+
+# Logrotate ~/.xsession-errors. {{{
+
+if which logrotate
+then
+  ( cd "$HOME" && logrotate -s "$X11DIR"/logrotate.{status,conf} )
+  redirect-output
+fi
+
+# }}}
+
 # NVIDIA settings. {{{
 
 if which nvidia-settings && lspci | grep -q 'VGA compatible controller: nVidia'
@@ -44,8 +56,6 @@ fi
 # }}}
 
 # X11. {{{
-
-X11DIR="$HOME/.x11"
 
 xhost +local:
 
