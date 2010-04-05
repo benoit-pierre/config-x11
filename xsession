@@ -112,6 +112,15 @@ fi
 
 # }}}
 
+# Reboot/Shutdow support using shutdown helper. {{{
+
+final_action=''
+
+trap 'final_action=reboot' USR1
+trap 'final_action=halt' USR2
+
+# }}}
+
 export XSESSION_PID=$$
 
 ion3 &
@@ -128,6 +137,10 @@ eval "$HAS_MPD_SONATA" && { pkill -u $UID -f sonata; mpd --kill; }
 
 # }}}
 
-log 'terminating'
+case "$final_action" in
+  reboot) shutdown -r ;;
+  halt) shutdown -h ;;
+  *) log 'terminating' ;;
+esac
 
 # vim: ft=sh sw=2 foldmethod=marker
