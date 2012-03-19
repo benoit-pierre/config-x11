@@ -57,12 +57,29 @@ fi
 
 # X11. {{{
 
+# Allow local connections.
 xhost +local:
 
+# No bell.
 xset b off
+
+# Keyboard auto-repeat:
+# - on
+# - enabled for capslock too
+# - fast
 xset r on
-xset r rate 300 50
-setxkbmap -option compose:rwin
+xset r 66
+xset r rate 250 80
+
+# Set right windows key to compose and remap capslock to backspace.
+# N.B.: don't do it for Typematrix keyboards.
+for dev in `xinput list --id-only`
+do
+  xinput list --name-only "$dev" | grep '\<USB Keyboard\>' | grep -qv '\<TypeMatrix\.com\>' || continue
+  setxkbmap -device "$dev" -option compose:rwin,caps:backspace
+done
+
+# Resources.
 xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
 
 # }}}
