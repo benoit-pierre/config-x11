@@ -64,7 +64,7 @@ xhost +local:
 xset b off
 
 # Keyboard configuration.
-autoload setxkbd && setxkbd
+setxkbd
 
 # Resources.
 xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
