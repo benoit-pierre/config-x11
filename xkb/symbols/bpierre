@@ -1,0 +1,98 @@
+
+partial default alphanumeric_keys
+xkb_symbols "colemak" {
+    include "us(colemak)"
+    include "bpierre(prog_level)"
+    include "bpierre(swap_caps_backspace)"
+    name[Group1]= "Colemak (Faugn)";
+};
+
+partial default alphanumeric_keys
+xkb_symbols "colemak_typematrix" {
+    include "us(colemak)"
+    include "bpierre(orig_caps_backspace)"
+    name[Group1]= "Colemak (Faugn TypeMatrix)";
+};
+
+partial alphanumeric_keys
+xkb_symbols "us" {
+    include "us(basic)"
+    include "bpierre(swap_caps_backspace)"
+    name[Group1]= "English (Faugn)";
+};
+
+partial default alphanumeric_keys
+xkb_symbols "us_typematrix" {
+    include "bpierre(us)"
+    name[Group1]= "English (Faugn TypeMatrix)";
+};
+
+partial hidden modifier_keys
+xkb_symbols "swap_caps_backspace" {
+    key <CAPS> { [ BackSpace, BackSpace , Delete    ] };
+    key <BKSP> { [ Caps_Lock, Caps_Lock , Caps_Lock ] };
+};
+
+partial hidden modifier_keys
+xkb_symbols "orig_caps_backspace" {
+    key <BKSP> { [ BackSpace, BackSpace ] };
+    key <CAPS> { [ Caps_Lock, Caps_Lock ] };
+};
+
+partial alphanumeric_keys
+xkb_symbols "prog_level" {
+    name[Group1]="3rd-level symbols for programmers";
+
+    key <TLDE> { [ NoSymbol, NoSymbol,      dead_grave,     dead_tilde ] };
+    key <AE01> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE02> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE03> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE04> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE05> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE06> { [ NoSymbol, NoSymbol, dead_circumflex,       NoSymbol ] };
+    key <AE07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE08> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE10> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE11> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AE12> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+
+    key <AD01> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AD02> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AD03> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AD04> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AD05> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AD06> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AD07> { [ NoSymbol, NoSymbol,            Home,       NoSymbol ] };
+    key <AD08> { [ NoSymbol, NoSymbol,              Up,       NoSymbol ] };
+    key <AD09> { [ NoSymbol, NoSymbol,             End,       NoSymbol ] };
+    key <AD10> { [ NoSymbol, NoSymbol,           Prior,       NoSymbol ] };
+    key <AD11> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AD12> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+
+    key <AC01> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AC02> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AC03> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AC04> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AC05> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AC06> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AC07> { [ NoSymbol, NoSymbol,            Left,       NoSymbol ] };
+    key <AC08> { [ NoSymbol, NoSymbol,            Down,       NoSymbol ] };
+    key <AC09> { [ NoSymbol, NoSymbol,           Right,       NoSymbol ] };
+    key <AC10> { [ NoSymbol, NoSymbol,            Next,       NoSymbol ] };
+    key <AC11> { [ NoSymbol, NoSymbol,      dead_acute, dead_diaeresis ] };
+    key <BKSL> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+
+    key <AB01> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AB02> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AB03> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AB04> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AB07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AB08> { [ NoSymbol, NoSymbol,    dead_cedilla,       NoSymbol ] };
+    key <AB09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+
+    key <RALT> { [ Alt_L ] };
+
+    include "level3(lalt_switch)"
+};
+
