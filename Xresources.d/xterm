@@ -33,6 +33,8 @@ XTerm.vt100.translations: #override \
 	Ctrl<Btn1Down>: ignore() \n\
 	Ctrl<Btn2Down>: ignore() \n\
 	Ctrl<Btn3Down>: ignore() \n\
+        Shift<KeyPress>Prior: insert() \n\
+        Shift<KeyPress>Next: insert() \n\
 
 XTerm.vt100.color0 : #000000
 XTerm.vt100.color1 : #FF2F1D
