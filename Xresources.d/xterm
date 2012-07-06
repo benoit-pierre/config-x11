@@ -29,7 +29,7 @@ XTerm.vt100.trimSelection       : true
 XTerm.vt100.utf8                : 1
 
 XTerm.vt100.translations: #override \
-	Ctrl<KeyPress>p:dabbrev-expand() \n\
+	Shift<KeyPress>Tab:dabbrev-expand() \n\
 	Ctrl<Btn1Down>: ignore() \n\
 	Ctrl<Btn2Down>: ignore() \n\
 	Ctrl<Btn3Down>: ignore() \n\
