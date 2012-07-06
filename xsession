@@ -127,7 +127,7 @@ trap 'final_action=halt' USR2
 
 export XSESSION_PID=$$
 
-ion3 &
+awesome &
 
 WM_PID=$!
 
