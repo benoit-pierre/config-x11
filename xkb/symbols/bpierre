@@ -4,27 +4,27 @@ xkb_symbols "colemak" {
     include "us(colemak)"
     include "bpierre(prog_level)"
     include "bpierre(swap_caps_backspace)"
-    name[Group1]= "Colemak (Faugn)";
+    name[Group1]= "Colemak (bpierre)";
 };
 
 partial default alphanumeric_keys
 xkb_symbols "colemak_typematrix" {
     include "us(colemak)"
     include "bpierre(orig_caps_backspace)"
-    name[Group1]= "Colemak (Faugn TypeMatrix)";
+    name[Group1]= "Colemak (bpierre TypeMatrix)";
 };
 
 partial alphanumeric_keys
 xkb_symbols "us" {
     include "us(basic)"
     include "bpierre(swap_caps_backspace)"
-    name[Group1]= "English (Faugn)";
+    name[Group1]= "English (bpierre)";
 };
 
 partial default alphanumeric_keys
 xkb_symbols "us_typematrix" {
     include "bpierre(us)"
-    name[Group1]= "English (Faugn TypeMatrix)";
+    name[Group1]= "English (bpierre TypeMatrix)";
 };
 
 partial hidden modifier_keys
