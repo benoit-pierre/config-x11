@@ -66,7 +66,7 @@ xkb_symbols "prog_level" {
     key <AD07> { [ NoSymbol, NoSymbol,            Home,       NoSymbol ] };
     key <AD08> { [ NoSymbol, NoSymbol,              Up,       NoSymbol ] };
     key <AD09> { [ NoSymbol, NoSymbol,             End,       NoSymbol ] };
-    key <AD10> { [ NoSymbol, NoSymbol,           Prior,       NoSymbol ] };
+    key <AD10> { [ NoSymbol, NoSymbol,        KP_Prior,       NoSymbol ] };
     key <AD11> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AD12> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
 
@@ -79,7 +79,7 @@ xkb_symbols "prog_level" {
     key <AC07> { [ NoSymbol, NoSymbol,            Left,       NoSymbol ] };
     key <AC08> { [ NoSymbol, NoSymbol,            Down,       NoSymbol ] };
     key <AC09> { [ NoSymbol, NoSymbol,           Right,       NoSymbol ] };
-    key <AC10> { [ NoSymbol, NoSymbol,            Next,       NoSymbol ] };
+    key <AC10> { [ NoSymbol, NoSymbol,         KP_Next,       NoSymbol ] };
     key <AC11> { [ NoSymbol, NoSymbol,      dead_acute, dead_diaeresis ] };
     key <BKSL> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
 
