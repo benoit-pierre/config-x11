@@ -29,6 +29,7 @@ XTerm.vt100.trimSelection       : true
 XTerm.vt100.utf8                : 1
 
 XTerm.vt100.translations: #override \n\
+	Alt<Key>Tab: set-altscreen(toggle) \n\
 	Shift<Key>Tab: dabbrev-expand() \n\
 	Ctrl<Btn1Down>: ignore() \n\
 	Ctrl<Btn2Down>: ignore() \n\
