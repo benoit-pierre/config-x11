@@ -116,7 +116,7 @@ fi
 
 # }}}
 
-# Reboot/Shutdow support using shutdown helper. {{{
+# Reboot/Shutdown support using shutdown helper. {{{
 
 final_action=''
 
