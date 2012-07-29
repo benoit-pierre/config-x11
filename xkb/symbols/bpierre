@@ -18,6 +18,8 @@ xkb_symbols "colemak_typematrix" {
 partial alphanumeric_keys
 xkb_symbols "us" {
     include "us(basic)"
+    include "bpierre(prog_level)"
+    include "bpierre(swap_ralt_rctrl)"
     include "bpierre(swap_caps_backspace)"
     name[Group1]= "English (bpierre)";
 };
@@ -38,6 +40,12 @@ partial hidden modifier_keys
 xkb_symbols "orig_caps_backspace" {
     key <BKSP> { [ BackSpace, BackSpace ] };
     key <CAPS> { [ Caps_Lock, Caps_Lock ] };
+};
+
+partial hidden modifier_keys
+xkb_symbols "swap_ralt_rctrl" {
+    key <RALT> { [ Control_R ] };
+    key <RCTL> { [ Alt_R ] };
 };
 
 partial alphanumeric_keys
@@ -94,9 +102,11 @@ xkb_symbols "prog_level" {
     key <AB08> { [ NoSymbol, NoSymbol,    dead_cedilla,       NoSymbol ] };
     key <AB09> { [ NoSymbol, NoSymbol,        SunPaste,       NoSymbol ] };
 
-    key <RALT> { [ Alt_L ] };
-
-    include "level3(lalt_switch)"
+    key <LALT> {
+	type[Group1]="ONE_LEVEL",
+	symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    modifier_map Mod5 { <LALT> };
 };
 
 // vim: ft=xkb sw=4
