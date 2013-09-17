@@ -1,5 +1,12 @@
 #! /bin/zsh -l
 
+# Crude hack to detect if we're being source;
+# e.g. by /etc/lightdm/Xsession...
+if [ "$(basename "$0")" != ".xsession" ]
+then
+  return
+fi
+
 # Output logging. {{{
 
 redirect-output()
