@@ -89,15 +89,6 @@ fi
 
 # }}}
 
-# Fetchmail. {{{
-
-if which fetchmail && [[ -r "$HOME/.fetchmailrc" ]]
-then
-  fetchmail
-fi
-
-# }}}
-
 # Pulseaudio. {{{
 
 if which pulseaudio
