@@ -107,11 +107,11 @@ fi
 
 # }}}
 
-# MPD/sonata startup. {{{
+# MPD. {{{
 
-if which mpd mpdscribble sonata
+if which mpd
 then
-  (mpd && mpdscribble && sonata) &
+  mpd
 fi
 
 # }}}
