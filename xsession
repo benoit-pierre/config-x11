@@ -127,13 +127,7 @@ trap 'final_action=halt' USR2
 
 export XSESSION_PID=$$
 
-awesome &
-
-WM_PID=$!
-
-kill -STOP $XSESSION_PID
-
-wait $WM_PID
+awesome
 
 # MPD/sonata cleanup. {{{
 
