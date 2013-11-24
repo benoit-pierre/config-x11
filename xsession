@@ -100,7 +100,7 @@ fi
 
 if which pulseaudio
 then
-  pulseaudio --daemonize --high-priority=1 --realtime=1
+  pulseaudio --daemonize
 fi
 
 # }}}
