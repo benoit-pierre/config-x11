@@ -3,7 +3,7 @@ partial default alphanumeric_keys
 xkb_symbols "colemak" {
     include "us(colemak)"
     include "bpierre(prog_level)"
-    include "bpierre(swap_ralt_rctrl)"
+    include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(swap_caps_backspace)"
     name[Group1]= "Colemak (bpierre)";
 };
@@ -19,7 +19,7 @@ partial alphanumeric_keys
 xkb_symbols "us" {
     include "us(basic)"
     include "bpierre(prog_level)"
-    include "bpierre(swap_ralt_rctrl)"
+    include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(swap_caps_backspace)"
     name[Group1]= "English (bpierre)";
 };
@@ -43,8 +43,9 @@ xkb_symbols "orig_caps_backspace" {
 };
 
 partial hidden modifier_keys
-xkb_symbols "swap_ralt_rctrl" {
-    key <RALT> { [ Control_R ] };
+xkb_symbols "swap_ralt_rctrl_lctrl" {
+    key <RALT> { [ Control_L ] };
+    key <LCTL> { [ Control_R ] };
     key <RCTL> { [ Alt_R ] };
 };
 
