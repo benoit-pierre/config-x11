@@ -114,6 +114,16 @@ fi
 
 # }}}
 
+# XbindKeys. {{{
+
+cfg="$HOME/.xbindkeysrc"
+if [[ -r "$cfg" ]]
+then
+  xbindkeys
+fi
+
+# }}}
+
 # Reboot/Shutdown support using shutdown helper. {{{
 
 final_action=''
