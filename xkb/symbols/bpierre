@@ -11,6 +11,8 @@ xkb_symbols "colemak" {
 partial default alphanumeric_keys
 xkb_symbols "colemak_typematrix" {
     include "us(colemak)"
+    include "bpierre(prog_level)"
+    include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(orig_caps_backspace)"
     name[Group1]= "Colemak (bpierre TypeMatrix)";
 };
