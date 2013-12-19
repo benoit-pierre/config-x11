@@ -4,10 +4,11 @@ XTerm.toolBar            : false
 XTerm.waitForMap         : true
 XTerm.zIconBeep          : 0
 XTerm.termName           : xterm-256color
-XTerm.backarrowKeyIsErase: true
+XTerm.backarrowKeyIsErase: false
+XTerm.ptyInitialErase    : true
 
 XTerm.vt100.alwaysHighlight     : false
-XTerm.vt100.backarrowKey        : true
+XTerm.vt100.backarrowKey        : false
 XTerm.vt100.background          : #000000
 XTerm.vt100.bellIsUrgent        : true
 XTerm.vt100.charClass           : 37:48,45-47:48,126:48
@@ -31,6 +32,7 @@ XTerm.vt100.utf8                : 1
 XTerm.vt100.translations: #override \n\
 	Alt<Key>Tab: set-altscreen(toggle) \n\
 	Shift<Key>Tab: dabbrev-expand() \n\
+	Ctrl<Key>BackSpace: insert-eight-bit() \n\
 	Ctrl<Btn1Down>: ignore() \n\
 	Ctrl<Btn2Down>: ignore() \n\
 	Ctrl<Btn3Down>: ignore() \n\
