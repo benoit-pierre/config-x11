@@ -158,10 +158,14 @@ fi
 
 # }}}
 
+# Reboot/Shutdown support using shutdown helper. {{{
+
 case "$final_action" in
   reboot) shutdown -r ;;
   halt) shutdown -h ;;
   *) log 'terminating' ;;
 esac
+
+# }}}
 
 # vim: ft=zsh sw=2 foldmethod=marker
