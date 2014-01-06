@@ -36,16 +36,6 @@ XTerm.vt100.translations: #override \n\
 	Ctrl<Btn1Down>: ignore() \n\
 	Ctrl<Btn2Down>: ignore() \n\
 	Ctrl<Btn3Down>: ignore() \n\
-	/* SunPaste */ Mod5<Key>period: insert-selection(PRIMARY, CUT_BUFFER0) \n\
-	/* Shift+KP_PageUp */ Mod5 Shift<Key>semicolon: scroll-back(1,halfpage) \n\
-	/* Shift+KP_PageDown */ Mod5 Shift<Key>o: scroll-forw(1,halfpage) \n\
-	/* Ctrl+KP_PageUp */ Mod5 Ctrl<Key>semicolon: string(0x1b) string("[5;5~") \n\
-	/* Ctrl+KP_PageDown */ Mod5 Ctrl<Key>o: string(0x1b) string("[6;5~") \n\
-	/* Ctrl+Delete */ Mod5 Ctrl<Key>BackSpace: string(0x1b) string("[3;5~") \n\
-	/* Ctrl+Home */ Mod5 Ctrl<Key>l: string(0x1b) string("[1;5H") \n\
-	/* Ctrl+End */ Mod5 Ctrl<Key>y: string(0x1b) string("[1;5F") \n\
-	/* Ctrl+Left */ Mod5 Ctrl<Key>n: string(0x1b) string("[1;5D") \n\
-	/* Ctrl+Right */ Mod5 Ctrl<Key>i: string(0x1b) string("[1;5C") \n\
 
 XTerm.vt100.color0 : #000000
 XTerm.vt100.color1 : #FF2F1D
