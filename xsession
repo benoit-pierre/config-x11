@@ -1,5 +1,8 @@
 #! /bin/zsh -l
 
+[[ "x-t" != "x$1" ]]
+opt_test=$?
+
 # Crude hack to detect if we're being source;
 # e.g. by /etc/lightdm/Xsession...
 if [ "$(basename "$0")" != ".xsession" ]
@@ -11,6 +14,10 @@ fi
 
 redirect-output()
 {
+  if [[ 0 -ne $opt_test ]]
+  then
+    return
+  fi
   exec 1>>"$HOME/.xsession-errors" 2>&1
 }
 
@@ -130,6 +137,11 @@ final_action=''
 
 trap 'final_action=reboot' USR1
 trap 'final_action=halt' USR2
+
+if [[ 0 -ne $opt_test ]]
+then
+  export SHUTDOWN_DRYRUN=1
+fi
 
 # }}}
 
