@@ -164,4 +164,4 @@ case "$final_action" in
   *) log 'terminating' ;;
 esac
 
-# vim: ft=sh sw=2 foldmethod=marker
+# vim: ft=zsh sw=2 foldmethod=marker
