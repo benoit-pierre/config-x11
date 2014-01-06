@@ -149,9 +149,12 @@ export XSESSION_PID=$$
 
 awesome
 
-# MPD/sonata cleanup. {{{
+# MPD. {{{
 
-eval "$HAS_MPD_SONATA" && { pkill -u $UID -f sonata; mpd --kill; }
+if which mpd
+then
+  mpd --kill
+fi
 
 # }}}
 
