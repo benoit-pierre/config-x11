@@ -1,4 +1,4 @@
-#! /bin/zsh -l
+#!/bin/zsh -l
 
 [[ "x-t" != "x$1" ]]
 opt_test=$?
