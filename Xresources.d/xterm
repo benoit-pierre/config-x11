@@ -28,6 +28,7 @@ XTerm.vt100.showMissingGlyphs   : true
 XTerm.vt100.titeInhibit         : true
 XTerm.vt100.trimSelection       : true
 XTerm.vt100.utf8                : 1
+XTerm.vt100.disallowedWindowOps : 20,21,SetXprop
 
 XTerm.vt100.translations: #override \n\
 	Alt<Key>Tab: set-altscreen(toggle) \n\
