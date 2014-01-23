@@ -17,6 +17,15 @@ xkb_symbols "colemak_typematrix" {
     name[Group1]= "Colemak (bpierre TypeMatrix)";
 };
 
+partial default alphanumeric_keys
+xkb_symbols "colemak_chromebook" {
+    include "us(colemak)"
+    include "bpierre(prog_level)"
+    include "bpierre(swap_ralt_rctrl_lctrl)"
+    include "bpierre(chromebook)"
+    name[Group1]= "Colemak (bpierre)";
+};
+
 partial alphanumeric_keys
 xkb_symbols "us" {
     include "us(basic)"
@@ -49,6 +58,37 @@ xkb_symbols "swap_ralt_rctrl_lctrl" {
     key <RALT> { [ Control_L ] };
     key <LCTL> { [ Control_R ] };
     key <RCTL> { [ Alt_R ] };
+};
+
+partial hidden modifier_keys alphanumeric_keys
+xkb_symbols "chromebook" {
+    key <BKSP> { [ Caps_Lock ] };
+    key <LCTL> { [ Super_L ] };
+    key <LWIN> { [ BackSpace ] };
+
+    key <I211>{ [ XF86Back              ] };
+    key <I212>{ [ XF86Forward           ] };
+    key <I213>{ [ XF86Reload            ] };
+    key <I214>{ [ XF86Red               ] };
+    key <I215>{ [ XF86Green             ] };
+    key <I216>{ [ XF86MonBrightnessDown ] };
+    key <I217>{ [ XF86MonBrightnessUp   ] };
+    key <I218>{ [ XF86AudioMute         ] };
+    key <I219>{ [ XF86AudioLowerVolume  ] };
+    key <I220>{ [ XF86AudioRaiseVolume  ] };
+    key <I221>{ [ XF86PowerOff          ] };
+
+    key <FK01>{ [ F1  ], actions = [ NoAction(), NoAction(), Redirect(key=<I211>, clearmods=Mod5) ] };
+    key <FK02>{ [ F2  ], actions = [ NoAction(), NoAction(), Redirect(key=<I212>, clearmods=Mod5) ] };
+    key <FK03>{ [ F3  ], actions = [ NoAction(), NoAction(), Redirect(key=<I213>, clearmods=Mod5) ] };
+    key <FK04>{ [ F4  ], actions = [ NoAction(), NoAction(), Redirect(key=<I214>, clearmods=Mod5) ] };
+    key <FK05>{ [ F5  ], actions = [ NoAction(), NoAction(), Redirect(key=<I215>, clearmods=Mod5) ] };
+    key <FK06>{ [ F6  ], actions = [ NoAction(), NoAction(), Redirect(key=<I216>, clearmods=Mod5) ] };
+    key <FK07>{ [ F7  ], actions = [ NoAction(), NoAction(), Redirect(key=<I217>, clearmods=Mod5) ] };
+    key <FK08>{ [ F8  ], actions = [ NoAction(), NoAction(), Redirect(key=<I218>, clearmods=Mod5) ] };
+    key <FK09>{ [ F9  ], actions = [ NoAction(), NoAction(), Redirect(key=<I219>, clearmods=Mod5) ] };
+    key <FK10>{ [ F10 ], actions = [ NoAction(), NoAction(), Redirect(key=<I220>, clearmods=Mod5) ] };
+    key <FK11>{ [ F11 ], actions = [ NoAction(), NoAction(), Redirect(key=<I221>, clearmods=Mod5) ] };
 };
 
 partial alphanumeric_keys
