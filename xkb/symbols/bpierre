@@ -60,7 +60,7 @@ xkb_symbols "swap_ralt_rctrl_lctrl" {
     key <RCTL> { [ Alt_R ] };
 };
 
-partial hidden modifier_keys alphanumeric_keys
+partial hidden modifier_keys function_keys
 xkb_symbols "chromebook" {
     key <BKSP> { [ Caps_Lock ] };
     key <LCTL> { [ Super_L ] };
@@ -76,7 +76,6 @@ xkb_symbols "chromebook" {
     key <I218>{ [ XF86AudioMute         ] };
     key <I219>{ [ XF86AudioLowerVolume  ] };
     key <I220>{ [ XF86AudioRaiseVolume  ] };
-    key <I221>{ [ XF86PowerOff          ] };
 
     key <FK01>{ [ F1  ], actions = [ NoAction(), NoAction(), Redirect(key=<I211>, clearmods=Mod5) ] };
     key <FK02>{ [ F2  ], actions = [ NoAction(), NoAction(), Redirect(key=<I212>, clearmods=Mod5) ] };
@@ -88,7 +87,6 @@ xkb_symbols "chromebook" {
     key <FK08>{ [ F8  ], actions = [ NoAction(), NoAction(), Redirect(key=<I218>, clearmods=Mod5) ] };
     key <FK09>{ [ F9  ], actions = [ NoAction(), NoAction(), Redirect(key=<I219>, clearmods=Mod5) ] };
     key <FK10>{ [ F10 ], actions = [ NoAction(), NoAction(), Redirect(key=<I220>, clearmods=Mod5) ] };
-    key <FK11>{ [ F11 ], actions = [ NoAction(), NoAction(), Redirect(key=<I221>, clearmods=Mod5) ] };
 };
 
 partial alphanumeric_keys
