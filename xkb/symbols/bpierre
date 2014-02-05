@@ -93,6 +93,10 @@ partial alphanumeric_keys
 xkb_symbols "prog_level" {
     name[Group1]="3rd-level symbols for programmers";
 
+    // Useful for clearing sticky keys...
+    key <I221> { [ NoSymbol ] };
+    key <ESC>  { [   Escape,   Escape,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<I221>), Redirect(key=<I221>) ] };
+
     key <TLDE> { [ NoSymbol, NoSymbol,      dead_grave,     dead_tilde ] };
     key <AE01> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AE02> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
