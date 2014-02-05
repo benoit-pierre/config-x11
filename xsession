@@ -71,9 +71,6 @@ fi
 
 # X11. {{{
 
-# Allow local connections.
-xhost +local:
-
 # No bell.
 xset b off
 
