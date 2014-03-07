@@ -54,6 +54,19 @@ fi
 
 # }}}
 
+# Background.
+
+for p in hsetroot fbsetroot
+do
+ if which "$p"
+ then
+   "$p" -solid '#000000'
+   break
+ fi
+done
+
+# }}}
+
 # SSH/GPG agents. {{{
 
 ssh-gpg-agents
