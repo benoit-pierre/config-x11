@@ -32,7 +32,8 @@ redirect-output
 
 log 'starting'
 
-X11DIR="${XDG_CONFIG_HOME:-$HOME/.config}/x11"
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+X11DIR="$XDG_CONFIG_HOME/x11"
 
 # Logrotate ~/.xsession-errors. {{{
 
