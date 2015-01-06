@@ -1,25 +1,25 @@
 
 partial default alphanumeric_keys
 xkb_symbols "colemak" {
-    include "us(colemak)"
+    include "bpierre(colemak_base)"
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(swap_caps_backspace)"
     name[Group1]= "Colemak (bpierre)";
 };
 
-partial default alphanumeric_keys
+partial alphanumeric_keys
 xkb_symbols "colemak_typematrix" {
-    include "us(colemak)"
+    include "bpierre(colemak_base)"
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(orig_caps_backspace)"
     name[Group1]= "Colemak (bpierre TypeMatrix)";
 };
 
-partial default alphanumeric_keys
+partial alphanumeric_keys
 xkb_symbols "colemak_chromebook" {
-    include "us(colemak)"
+    include "bpierre(colemak_base)"
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(chromebook)"
@@ -35,7 +35,7 @@ xkb_symbols "us" {
     name[Group1]= "English (bpierre)";
 };
 
-partial default alphanumeric_keys
+partial alphanumeric_keys
 xkb_symbols "us_typematrix" {
     include "bpierre(us)"
     name[Group1]= "English (bpierre TypeMatrix)";
@@ -87,6 +87,64 @@ xkb_symbols "chromebook" {
     key <FK08>{ [ F8  ], actions = [ NoAction(), NoAction(), Redirect(key=<I218>, clearmods=Mod5) ] };
     key <FK09>{ [ F9  ], actions = [ NoAction(), NoAction(), Redirect(key=<I219>, clearmods=Mod5) ] };
     key <FK10>{ [ F10 ], actions = [ NoAction(), NoAction(), Redirect(key=<I220>, clearmods=Mod5) ] };
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "colemak_base" {
+
+    include "level3(ralt_switch)"
+    name[Group1]= "Modified Colemak";
+
+    key <TLDE> { [        grave,   asciitilde ] };
+    key <AE01> { [       exclam,            1 ] };
+    key <AE02> { [           at,            2 ] };
+    key <AE03> { [   numbersign,            3 ] };
+    key <AE04> { [       dollar,            4 ] };
+    key <AE05> { [      percent,            5 ] };
+    key <AE06> { [  asciicircum,            6 ] };
+    key <AE07> { [    ampersand,            7 ] };
+    key <AE08> { [     asterisk,            8 ] };
+    key <AE09> { [    parenleft,            9 ] };
+    key <AE10> { [   parenright,            0 ] };
+    key <AE11> { [        minus,   underscore ] };
+    key <AE12> { [         equal,        plus ] };
+
+    key <AD01> { [            q,            Q ] };
+    key <AD02> { [            w,            W ] };
+    key <AD03> { [            f,            F ] };
+    key <AD04> { [            p,            P ] };
+    key <AD05> { [            g,            G ] };
+    key <AD06> { [            j,            J ] };
+    key <AD07> { [            l,            L ] };
+    key <AD08> { [            u,            U ] };
+    key <AD09> { [            y,            Y ] };
+    key <AD10> { [        colon,    semicolon ] };
+    key <AD11> { [  bracketleft,    braceleft ] };
+    key <AD12> { [ bracketright,   braceright ] };
+    key <BKSL> { [    backslash,          bar ] };
+
+    key <AC01> { [            a,            A ] };
+    key <AC02> { [            r,            R ] };
+    key <AC03> { [            s,            S ] };
+    key <AC04> { [            t,            T ] };
+    key <AC05> { [            d,            D ] };
+    key <AC06> { [            h,            H ] };
+    key <AC07> { [            n,            N ] };
+    key <AC08> { [            e,            E ] };
+    key <AC09> { [            i,            I ] };
+    key <AC10> { [            o,            O ] };
+    key <AC11> { [   apostrophe,     quotedbl ] };
+
+    key <AB01> { [            z,            Z ] };
+    key <AB02> { [            x,            X ] };
+    key <AB03> { [            c,            C ] };
+    key <AB04> { [            v,            V ] };
+    key <AB05> { [            b,            B ] };
+    key <AB06> { [            k,            K ] };
+    key <AB07> { [            m,            M ] };
+    key <AB08> { [        comma,         less ] };
+    key <AB09> { [       period,      greater ] };
+    key <AB10> { [        slash,     question ] };
 };
 
 partial alphanumeric_keys
