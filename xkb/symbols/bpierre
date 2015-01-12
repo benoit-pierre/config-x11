@@ -201,7 +201,7 @@ xkb_symbols "prog_level" {
     key <AB04> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AB05> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AB06> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
-    key <AB07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
+    key <AB07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<MENU>,             clearmods=Mod5) ] };
     key <AB08> { [ NoSymbol, NoSymbol,    dead_cedilla,       NoSymbol ] };
     key <AB09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key= <INS>, mods=Shift, clearmods=Mod5) ] };
 
