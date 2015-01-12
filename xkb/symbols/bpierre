@@ -175,10 +175,10 @@ xkb_symbols "prog_level" {
     key <AD04> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AD05> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AD06> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
-    key <AD07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<HOME>, clearmods=Mod5), Redirect(key=<HOME>, clearmods=Mod5) ] };
-    key <AD08> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<UP>  , clearmods=Mod5), Redirect(key=<UP>  , clearmods=Mod5) ] };
-    key <AD09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<END> , clearmods=Mod5), Redirect(key=<END> , clearmods=Mod5) ] };
-    key <AD10> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<PGUP>, clearmods=Mod5), Redirect(key=<PGUP>, clearmods=Mod5) ] };
+    key <AD07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<HOME>,             clearmods=Mod5), Redirect(key=<HOME>,             clearmods=Mod5) ] };
+    key <AD08> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=  <UP>,             clearmods=Mod5), Redirect(key=  <UP>,             clearmods=Mod5) ] };
+    key <AD09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key= <END>,             clearmods=Mod5), Redirect(key= <END>,             clearmods=Mod5) ] };
+    key <AD10> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<PGUP>,             clearmods=Mod5), Redirect(key=<PGUP>,             clearmods=Mod5) ] };
     key <AD11> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AD12> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
 
@@ -188,10 +188,10 @@ xkb_symbols "prog_level" {
     key <AC04> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AC05> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AC06> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
-    key <AC07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<LEFT>, clearmods=Mod5), Redirect(key=<LEFT>, clearmods=Mod5) ] };
-    key <AC08> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<DOWN>, clearmods=Mod5), Redirect(key=<DOWN>, clearmods=Mod5) ] };
-    key <AC09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<RGHT>, clearmods=Mod5), Redirect(key=<RGHT>, clearmods=Mod5) ] };
-    key <AC10> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<PGDN>, clearmods=Mod5), Redirect(key=<PGDN>, clearmods=Mod5) ] };
+    key <AC07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<LEFT>,             clearmods=Mod5), Redirect(key=<LEFT>,             clearmods=Mod5) ] };
+    key <AC08> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<DOWN>,             clearmods=Mod5), Redirect(key=<DOWN>,             clearmods=Mod5) ] };
+    key <AC09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<RGHT>,             clearmods=Mod5), Redirect(key=<RGHT>,             clearmods=Mod5) ] };
+    key <AC10> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<PGDN>,             clearmods=Mod5), Redirect(key=<PGDN>,             clearmods=Mod5) ] };
     key <AC11> { [ NoSymbol, NoSymbol,      dead_acute, dead_diaeresis ] };
     key <BKSL> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
 
@@ -203,7 +203,7 @@ xkb_symbols "prog_level" {
     key <AB06> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AB07> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ] };
     key <AB08> { [ NoSymbol, NoSymbol,    dead_cedilla,       NoSymbol ] };
-    key <AB09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key=<INS>, modifiers=shift, clearmods=Mod5) ] };
+    key <AB09> { [ NoSymbol, NoSymbol,        NoSymbol,       NoSymbol ], actions = [ NoAction(), NoAction(), Redirect(key= <INS>, mods=Shift, clearmods=Mod5) ] };
 
     key <LALT> {
 	type[Group1]="ONE_LEVEL",
