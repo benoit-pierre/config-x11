@@ -101,7 +101,7 @@ fi
 # No bell.
 xset b off
 
-# Keyboard configuration.
+# X inputs configuration.
 setxkbd
 
 # Resources.
