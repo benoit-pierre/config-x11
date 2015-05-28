@@ -158,7 +158,7 @@ fi
 # XbindKeys. {{{
 
 cfg="$HOME/.xbindkeysrc"
-if [[ -r "$cfg" ]]
+if which xbindkeys && [[ -r "$cfg" ]]
 then
   xbindkeys
 fi
