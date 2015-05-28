@@ -55,6 +55,15 @@ fi
 
 # }}}
 
+# Composition manager.
+
+if which compton && [[ -r "$XDG_CONFIG_HOME/compton.conf" ]]
+then
+  compton -b
+fi
+
+# }}}
+
 # Background.
 
 for p in hsetroot fbsetroot
