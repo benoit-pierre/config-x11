@@ -165,6 +165,16 @@ fi
 
 # }}}
 
+# Redshift. {{{
+
+cfg="$XDG_CONFIG_HOME/redshift.conf"
+if which redshift-gtk && [[ -r "$cfg" ]]
+then
+  redshift-gtk &
+fi
+
+# }}}
+
 # XbindKeys. {{{
 
 cfg="$HOME/.xbindkeysrc"
