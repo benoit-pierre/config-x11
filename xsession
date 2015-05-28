@@ -147,7 +147,8 @@ fi
 
 # MPD. {{{
 
-if which mpd
+cfg="$XDG_CONFIG_HOME/mpd/mpd.conf"
+if which mpd && [[ -r "$cfg" ]]
 then
   mpd
 fi
