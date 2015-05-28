@@ -106,7 +106,7 @@ xkb_symbols "colemak_base" {
     key <AE08> { [     asterisk,            8 ] };
     key <AE09> { [    parenleft,            9 ] };
     key <AE10> { [   parenright,            0 ] };
-    key <AE11> { [        minus,   underscore ] };
+    key <AE11> { [   underscore,        minus ] };
     key <AE12> { [         equal,        plus ] };
 
     key <AD01> { [            q,            Q ] };
