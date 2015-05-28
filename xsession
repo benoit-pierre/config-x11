@@ -155,6 +155,16 @@ fi
 
 # }}}
 
+# Parcellite. {{{
+
+cfg="$XDG_CONFIG_HOME/parcellite/parcelliterc"
+if which parcellite && [[ -r "$cfg" ]]
+then
+  parcellite &
+fi
+
+# }}}
+
 # XbindKeys. {{{
 
 cfg="$HOME/.xbindkeysrc"
