@@ -44,13 +44,13 @@ xkb_symbols "us_typematrix" {
 partial hidden modifier_keys
 xkb_symbols "swap_caps_backspace" {
     key <CAPS> { [ BackSpace, NoSymbol  ], actions = [ NoAction(), Redirect(key=<DELE>, clearmods=Shift) ] };
-    key <BKSP> { [ Caps_Lock, Caps_Lock ] };
+    key <BKSP> { [ Caps_Lock, Caps_Lock, ISO_Level3_Lock, ISO_Level3_Lock ] };
 };
 
 partial hidden modifier_keys
 xkb_symbols "orig_caps_backspace" {
     key <BKSP> { [ BackSpace, BackSpace ] };
-    key <CAPS> { [ Caps_Lock, Caps_Lock ] };
+    key <CAPS> { [ Caps_Lock, Caps_Lock, ISO_Level3_Lock, ISO_Level3_Lock ] };
 };
 
 partial hidden modifier_keys
