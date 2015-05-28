@@ -23,7 +23,7 @@ xkb_symbols "colemak_chromebook" {
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(chromebook)"
-    name[Group1]= "Colemak (bpierre)";
+    name[Group1]= "Colemak (bpierre Chromebook)";
 };
 
 partial alphanumeric_keys
