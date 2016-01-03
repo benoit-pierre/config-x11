@@ -111,7 +111,7 @@ fi
 xset b off
 
 # X inputs configuration.
-setxkbd
+setxinput
 
 # Resources.
 xrdb -merge -I"$X11DIR/Xresources.d" "$X11DIR/Xresources"
