@@ -1,0 +1,17 @@
+
+partial function_keys
+xkb_symbols "naga_thumbgrid" {
+    key <AE01> { [ F6 ] };
+    key <AE02> { [ F5 ] };
+    key <AE03> { [ F4 ] };
+    key <AE04> { [ F1 ] };
+    key <AE05> { [ F2 ] };
+    key <AE06> { [ F3 ] };
+    key <AE07> { [  1 ] };
+    key <AE08> { [  2 ] };
+    key <AE09> { [  3 ] };
+    key <AE10> { [  4 ] };
+    key <AE11> { [  5 ] };
+    key <AE12> { [  6 ] };
+};
+
