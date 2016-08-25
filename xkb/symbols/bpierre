@@ -5,6 +5,7 @@ xkb_symbols "colemak" {
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(swap_caps_backspace)"
+    include "bpierre(vt_switch)"
     name[Group1]= "Colemak (bpierre)";
 };
 
@@ -14,6 +15,7 @@ xkb_symbols "colemak_typematrix" {
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(orig_caps_backspace)"
+    include "bpierre(vt_switch)"
     name[Group1]= "Colemak (bpierre TypeMatrix)";
 };
 
@@ -23,6 +25,7 @@ xkb_symbols "colemak_chromebook" {
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(chromebook)"
+    include "bpierre(vt_switch)"
     name[Group1]= "Colemak (bpierre Chromebook)";
 };
 
@@ -32,6 +35,7 @@ xkb_symbols "us" {
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
     include "bpierre(swap_caps_backspace)"
+    include "bpierre(vt_switch)"
     name[Group1]= "English (bpierre)";
 };
 
@@ -40,6 +44,7 @@ xkb_symbols "us_typematrix" {
     include "bpierre(us)"
     include "bpierre(prog_level)"
     include "bpierre(swap_ralt_rctrl_lctrl)"
+    include "bpierre(vt_switch)"
     name[Group1]= "English (bpierre TypeMatrix)";
 };
 
@@ -89,6 +94,69 @@ xkb_symbols "chromebook" {
     key <FK08>{ [ F8  ], actions = [ NoAction(), NoAction(), Redirect(key=<I218>, clearmods=Mod5) ] };
     key <FK09>{ [ F9  ], actions = [ NoAction(), NoAction(), Redirect(key=<I219>, clearmods=Mod5) ] };
     key <FK10>{ [ F10 ], actions = [ NoAction(), NoAction(), Redirect(key=<I220>, clearmods=Mod5) ] };
+};
+
+partial hidden xkb_symbols "vt_switch" {
+
+    key <FK01> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=1, !SameServer) ]
+    };
+
+    key <FK02> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=2, !SameServer) ]
+    };
+
+    key <FK03> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=3, !SameServer) ]
+    };
+
+    key <FK04> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=4, !SameServer) ]
+    };
+
+    key <FK05> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=5, !SameServer) ]
+    };
+
+    key <FK06> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=6, !SameServer) ]
+    };
+
+    key <FK07> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=7, !SameServer) ]
+    };
+
+    key <FK08> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=8, !SameServer) ]
+    };
+
+    key <FK09> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=9, !SameServer) ]
+    };
+
+    key <FK10> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=10, !SameServer) ]
+    };
+
+    key <FK11> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=11, !SameServer) ]
+    };
+
+    key <FK12> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=12, !SameServer) ]
+    };
 };
 
 partial hidden alphanumeric_keys
