@@ -71,7 +71,7 @@ partial hidden modifier_keys function_keys
 xkb_symbols "chromebook" {
     key <BKSP> { [ Caps_Lock ] };
     key <LCTL> { [ Super_L ] };
-    key <LWIN> { [ BackSpace ] };
+    key <LWIN> { [ BackSpace, NoSymbol ], actions = [ NoAction(), Redirect(key=<DELE>, clearmods=Shift) ] };
 
     key <I211>{ [ XF86Back              ] };
     key <I212>{ [ XF86Forward           ] };
