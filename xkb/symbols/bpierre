@@ -283,6 +283,66 @@ xkb_symbols "prog_level" {
 	symbols[Group1] = [ ISO_Level3_Shift ]
     };
     modifier_map Mod5 { <LALT> };
+
+    key <AE01> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=1, !SameServer) ]
+    };
+
+    key <AE02> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=2, !SameServer) ]
+    };
+
+    key <AE03> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=3, !SameServer) ]
+    };
+
+    key <AE04> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=4, !SameServer) ]
+    };
+
+    key <AE05> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=5, !SameServer) ]
+    };
+
+    key <AE06> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=6, !SameServer) ]
+    };
+
+    key <AE07> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=7, !SameServer) ]
+    };
+
+    key <AE08> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=8, !SameServer) ]
+    };
+
+    key <AE09> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=9, !SameServer) ]
+    };
+
+    key <AE10> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=10, !SameServer) ]
+    };
+
+    key <AE11> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=11, !SameServer) ]
+    };
+
+    key <AE12> {
+	type="CTRL+ALT",
+	actions[Group1]= [ NoAction(), NoAction(), NoAction(), NoAction(), SwitchScreen(Screen=12, !SameServer) ]
+    };
 };
 
 // vim: ft=xkb sw=4
