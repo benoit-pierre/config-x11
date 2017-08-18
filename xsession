@@ -85,7 +85,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 # QT. {{{
 
-export QT_STYLE_OVERRIDE='gtk'
+export QT_QPA_PLATFORMTHEME='gtk2'
 
 # }}}
 
